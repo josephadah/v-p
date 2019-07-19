@@ -1,19 +1,24 @@
 <template>
-  <div class="container">
+  <div>
     <NavBar />
-    <TodoList />
+    <div class="container mt-3 mb-1">
+      <TodoList />
+    </div>
+    <Footer class="footer" />
   </div>
 </template>
 
 <script>
 import TodoList from './components/TodoList.vue'
 import NavBar from './components/layouts/NavBar'
+import Footer from './components/layouts/Footer'
 
 export default {
   name: 'app',
   components: {
     TodoList,
-    NavBar
+    NavBar,
+    Footer
   }
 }
 </script>
@@ -25,5 +30,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 </style>
